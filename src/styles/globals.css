@@ -121,7 +121,7 @@ body {
 
 @media (min-width: 1400px) {
   .pageContainer {
-    background-color: rgb(190, 21, 49);
+    /* background-color: rgb(190, 21, 49); */
     max-width: 1320px;
   }
 }
