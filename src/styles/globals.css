@@ -86,6 +86,7 @@ body {
 }
 
 body {
+  background-color: #e6e6e6;
 }
 
 .pageContainer {
@@ -127,35 +128,35 @@ body {
 
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
   .pageContainer {
-    background-color: pink;
+    /* background-color: pink; */
     max-width: 1140px;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .pageContainer {
-    background-color: purple;
+    /* background-color: purple; */
     max-width: 960px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .pageContainer {
-    background-color: orange;
+    /* background-color: orange; */
     max-width: 720px;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   .pageContainer {
-    background-color: olivedrab;
+    /* background-color: olivedrab; */
     max-width: 540px;
   }
 }
 
 @media (max-width: 576px) {
   .pageContainer {
-    background-color: rgb(21, 24, 190);
+    /* background-color: rgb(21, 24, 190); */
     width: 100%;
   }
 }
@@ -166,5 +167,5 @@ a {
 }
 
 .gridContainer {
-  background-color: #adee10;
+  padding: 20px;
 }
