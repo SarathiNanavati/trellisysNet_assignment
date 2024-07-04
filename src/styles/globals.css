@@ -86,13 +86,78 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+.pageContainer {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  /* xs: ,
+  custom376: 376px,
+
+  custom424: 424px,
+
+  // lagre mobile
+  sm: ,
+
+  // tablet
+  custom767: 767px,
+  md: ,
+
+  // laptop
+  custom991: 991px,
+  lg: ,
+
+  // desktop
+  xl: ,
+
+  // large screen
+  2xl:  */
+}
+
+@media (min-width: 1400px) {
+  .pageContainer {
+    background-color: rgb(190, 21, 49);
+    max-width: 1320px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .pageContainer {
+    background-color: pink;
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .pageContainer {
+    background-color: purple;
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .pageContainer {
+    background-color: orange;
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .pageContainer {
+    background-color: olivedrab;
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pageContainer {
+    background-color: rgb(21, 24, 190);
+    width: 100%;
+  }
 }
 
 a {
@@ -100,8 +165,6 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.gridContainer {
+  background-color: #adee10;
 }
