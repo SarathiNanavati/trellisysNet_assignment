@@ -7,6 +7,7 @@ export type GridRowType = {
   id: string;
   name: string;
   selected: boolean;
+  [key: string]: string | boolean;
 };
 
 export type GridDataType = {
@@ -37,19 +38,14 @@ const GridContainer = () => {
     fetchData();
   }, []);
 
-  // async function fetchData(): Promise<GridRowType[]> {
-  //   const file = await promises.readFile(
-  //     process.cwd() + "/data/grid_data.json",
-  //     "utf8"
-  //   );
-  //   const data = JSON.parse(file) as GridRowType[];
-  //   return data;
-  // }
-
-  const handleInputChange = (id: string, value: string) => {
+  const handleInputChange = (
+    id: string,
+    key: string,
+    value: string | boolean
+  ) => {
     const _data = { ...gridData };
     _data.data?.forEach((row) => {
-      if (row.id === id) row.name = value;
+      if (row.id === id) row[key] = value;
     });
 
     setGridData(_data as GridDataType);
@@ -81,13 +77,20 @@ const GridContainer = () => {
         return (
           <Row key={rIndex} justify={"center"} align={"middle"} gutter={30}>
             <GridColumn>
-              <Checkbox checked={row.selected} />
+              <Checkbox
+                checked={row.selected}
+                onChange={(e) =>
+                  handleInputChange(row.id, "selected", e.target.checked)
+                }
+              />
             </GridColumn>
             <GridColumn>{row.id}</GridColumn>
             <GridColumn>
               <Input
                 value={row.name}
-                onChange={(e) => handleInputChange(row.id, e.target.value)}
+                onChange={(e) =>
+                  handleInputChange(row.id, "name", e.target.value)
+                }
               />
             </GridColumn>
           </Row>
